@@ -6,11 +6,8 @@ public class EmpWage {
 	public static final	int NUM_WORKING_DAYS = 20;
 	public static final int WORKING_HRS_IN_MONTH = 100;
 
-	public static void main(String[] args) {
-		System.out.println("Welcome to Employee Wage Computation Pgm");
-		/*
-		 * UC6 : calculate wages till number of working hrs per month or number of working days is reached 
-		 */
+	public void computeEmpWage()
+	{
 		int empHrs,totalEmpWage,totalEmpHrs=0,totalWorkingDays=0;
 	    while(totalEmpHrs<=WORKING_HRS_IN_MONTH && totalWorkingDays<NUM_WORKING_DAYS)
 	    {	
@@ -35,6 +32,11 @@ public class EmpWage {
 	    }
 	    totalEmpWage=totalEmpHrs*EMP_RATE_PER_HOUR;
 	    System.out.println("Total Emp Wage Is:"+totalEmpWage);
-	    }
+	}
+	public static void main(String[] args) {
+		EmpWage e = new EmpWage();
+		System.out.println("Welcome to Employee Wage Computation Pgm");
+		e.computeEmpWage();
+	}
 
 }
